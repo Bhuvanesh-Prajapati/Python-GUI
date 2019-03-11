@@ -1,6 +1,7 @@
 from tkinter import *
 
-# basic window for the calculator
+# ========== Basic Window for The Calculator =========== #
+
 cal = Tk()
 cal.title("Calculator")
 operator = ""
@@ -9,7 +10,7 @@ input_text = StringVar()
 txtDisplay = Entry(cal, font=('arial', 20, 'bold'), textvariable=input_text, bd=15, insertwidth=5,
                    bg='light grey', justify='right').grid(columnspan=4)
 
-# =======================Functions========================= #
+# ======================= Functions ========================= #
 
 # function to update the input field whenever an input is given
 def btn_click(item):
@@ -31,11 +32,13 @@ def btn_equal():
     input_text.set(result)
     operator = ""
 
-# first row
+# ========================================= First Row =============================================== #
+
 clear = Button(cal, text="CLEAR", fg="black", padx=16, bd=8, font=('arial', 10, 'bold'), bg='light grey',
                command=btn_clear).grid(row=1, column=0)
 
-# second row
+# ===================================== Second Row ============================================= #
+
 seven = Button(cal, text="7", padx=16,bd=8,fg="black",font=('arial', 20, 'bold'), bg='light grey',
                command=lambda: btn_click(7)).grid(row=2, column=0)
 eight = Button(cal, text="8", padx=16,bd=8,fg="black",font=('arial', 20, 'bold'), bg='light grey',
@@ -45,7 +48,8 @@ nine = Button(cal, text="9", padx=16,bd=8,fg="black",font=('arial', 20, 'bold'),
 multiply = Button(cal, text="*", padx=16,bd=8,fg="black",font=('arial', 20, 'bold'), bg='light grey',
                command=lambda: btn_click("*")).grid(row=2, column=3)
 
-# third row
+# ========================================= Third Row =========================================== #
+
 four = Button(cal, text="4", padx=16,bd=8,fg="black",font=('arial', 20, 'bold'), bg='light grey',
                command=lambda: btn_click(4)).grid(row=3, column=0)
 five = Button(cal, text="5", padx=16,bd=8,fg="black",font=('arial', 20, 'bold'), bg='light grey',
@@ -55,7 +59,8 @@ six = Button(cal, text="6", padx=16,bd=8,fg="black",font=('arial', 20, 'bold'), 
 minus = Button(cal, text="-", padx=16,bd=8,fg="black",font=('arial', 20, 'bold'), bg='light grey',
                command=lambda: btn_click("-")).grid(row=3, column=3)
 
-# forth row
+# ======================================== Forth Row ======================================== #
+
 one = Button(cal, text="1", padx=16,bd=8,fg="black",font=('arial', 20, 'bold'), bg='light grey',
                command=lambda: btn_click(1)).grid(row=4, column=0)
 two = Button(cal, text="2", padx=16,bd=8,fg="black",font=('arial', 20, 'bold'), bg='light grey',
@@ -65,7 +70,8 @@ three = Button(cal, text="3", padx=16,bd=8,fg="black",font=('arial', 20, 'bold')
 plus = Button(cal, text="+", padx=16,bd=8,fg="black",font=('arial', 20, 'bold'), bg='light grey',
                command=lambda: btn_click("+")).grid(row=4, column=3)
 
-# fifth row
+# ========================================= Fifth Row ======================================== #
+
 zero = Button(cal, text="0", padx=16,bd=8,fg="black",font=('arial', 20, 'bold'), bg='light grey',
                command=lambda: btn_click(0)).grid(row=5, column=0)
 point = Button(cal, text=".", padx=16,bd=8,fg="black",font=('arial', 20, 'bold'), bg='light grey',
